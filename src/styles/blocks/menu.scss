@@ -1,6 +1,6 @@
 .header {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 8px 0 rgba(6, 11, 53, 0.06);
   background: $card-background-color;
@@ -15,44 +15,43 @@
 .nav {
   &__list {
     display: flex;
-    font-style: normal;
     list-style: none;
     align-items: center;
+    gap: 20px;
     margin: 0;
     padding: 0;
     font-size: 12px;
-    gap: 20px;
   }
 
   &__link {
-    align-items: center;
     display: inline-flex;
+    align-items: center;
+    height: $nav-height;
     padding: 0;
     text-transform: uppercase;
-    height: $nav-height;
     text-decoration: none;
     color: $main-color;
-    transition: color 0.3s ease;
+    transition: color $transition-duration ease;
 
     &:hover {
-      color: $color-hover;
+      color: $hover-color;
     }
+  }
+}
 
-    &--active {
-      color: $color-header-blue;
-      position: relative;
+.is-active {
+  color: $hover-color;
+  position: relative;
 
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 4px;
-        border-radius: 8px;
-        width: 100%;
-        background: $color-header-blue;
-      }
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    border-radius: $border-radius;
+    width: 100%;
+    background: $hover-color;
   }
 }
