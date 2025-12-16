@@ -3,12 +3,12 @@
   justify-content: space-between;
 
   &__star {
-    width: 16px;
-    height: 16px;
-
+    width: $star-size;
+    height: $star-size;
     background-image: url('../images/star.svg');
     background-repeat: no-repeat;
     background-position: center;
+
     &:not(:first-child) {
       margin-left: 4px;
     }
